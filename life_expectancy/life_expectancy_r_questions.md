@@ -12,7 +12,7 @@
    - Extract and display data for a specific region, say "Asia", and calculate the average `GDP_per_capita` for this region.
 
 4. **Visualize Data Distribution:**
-   - Create a basic histogram of `Life_expectancy` to visualize its distribution.
+   - Create a basic histogram of `Life_expectancy` to visualize its distribution using the `hist()` function.
 
 ## Identifying Specific Data Points
 5. **Find Specific Data Points:**
@@ -35,8 +35,8 @@
 
 ## Sorting and Ordering Data
 10. **Sort and Order Data:**
-   - Use the `sort` function to list the countries in ascending/descending order of `Adult_mortality`.
-   - Use the `order` function to list the top 5 countries based on `BMI` and the bottom 5 countries based on `Schooling`.
+   - Use the `sort()` function to list the countries in ascending/descending order of `Adult_mortality`.
+   - Use the `order()` function to list the top 5 countries based on `BMI` and the bottom 5 countries based on `Schooling`.
 
 ## Advanced Visualization and Aggregation
 11. **Facetted Visualization:**

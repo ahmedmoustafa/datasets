@@ -30,8 +30,8 @@
    - Explore the relationship between `Life_expectancy`, `Schooling`, and `Alcohol_consumption` using appropriate visualizations such as scatter plots.
 
 10. **Sort and Order Data:**
-   - Use the `sort()` function to list the countries in ascending/descending order of `Adult_mortality`.
-   - Use the `order()` function to list the top 5 countries based on `BMI` and the bottom 5 countries based on `Schooling`.
+   - List the countries in ascending/descending order of `Adult_mortality`.
+   - List the top 5 countries based on `BMI` and the bottom 5 countries based on `Schooling`.
 
 11. **Find and Display Rank of Japan (2015):**
    - Find and display the rank of Japan based on the `GDP_per_capita` column for the year 2015.

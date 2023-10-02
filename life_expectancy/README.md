@@ -33,5 +33,7 @@ This dataset, [`life_expectancy.csv`](life_expectancy.csv), contains information
 ## Usage
 This dataset can be used for various analytical purposes such as studying the factors affecting life expectancy, understanding the relationships between different health indicators, and assessing the impact of economic status on life expectancy.
 
+- [R questions](life_expectancy_r_questions.md), [R notebook](life_expectancy_r_notebook.ipynb)
+
 ## Citation
 This dataset was obtained from Kaggle, and it is available [here](https://www.kaggle.com/datasets/lashagoch/life-expectancy-who-updated/).

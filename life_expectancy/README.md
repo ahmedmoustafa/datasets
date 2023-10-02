@@ -27,8 +27,7 @@ This dataset, [`life_expectancy.csv`](life_expectancy.csv), contains information
 | `Thinness_ten_nineteen_years` | Float     | Prevalence of thinness among children and adolescents aged 10-19 years (%).|
 | `Thinness_five_nine_years`    | Float     | Prevalence of thinness among children aged 5-9 years (%).  |
 | `Schooling`                   | Float     | Number of years of Schooling.                              |
-| `Economy_status_Developed`    | Integer   | Binary indicator for developed economy status (1 for developed, 0 otherwise).|
-| `Economy_status_Developing`   | Integer   | Binary indicator for developing economy status (1 for developing, 0 otherwise).|
+| `Economy_status`              | String    | Economic status of the country, categorized as either `Developed` or `Developing`.|
 | `Life_expectancy`             | Float     | Average life expectancy at birth, total (years).           |
 
 ## Usage

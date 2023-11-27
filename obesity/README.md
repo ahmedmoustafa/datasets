@@ -35,6 +35,9 @@ The dataset consists of various features that include both lifestyle attributes 
 - Educational use in data science, particularly in health-related analytics.
 - Development of predictive models in public health.
 
+## Potential Questions
+- [Questions](questions.md)
+
 ## Disclaimer
 The dataset is provided "as is" without warranty of any kind.
 

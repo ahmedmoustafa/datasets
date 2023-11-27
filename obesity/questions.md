@@ -6,9 +6,9 @@
 - What is the proportion of each obesity level in the dataset?
 
 ## Bivariate Analysis
-- Is there a correlation between weight and height? Use a scatter plot to visualize this relationship.
-- How does weight distribution differ between genders? Display this using a boxplot.
-- Analyze the relationship between physical activity frequency (FAF) and obesity levels using a bar plot.
+- Is there a correlation between weight and height?
+- How does weight distribution differ between genders?
+- Analyze the relationship between physical activity frequency (FAF) and obesity levels.
 
 ## Multivariate Analysis
 - Create a heatmap to visualize the correlations between all numerical variables in the dataset.

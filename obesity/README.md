@@ -9,7 +9,7 @@ The dataset reports on obesity levels in individuals from Mexico, Peru, and Colo
 ## Description
 The dataset consists of various features that include both lifestyle attributes and physical measurements. The dataset is structured as follows:
 
-| Column Number | Column Name                      | Description                                      | Type (Abstract) | Possible Values/Range |
+| Column Number | Column Name                      | Description                                      | Type            | Possible Values/Range |
 |---------------|----------------------------------|--------------------------------------------------|-----------------|-----------------------|
 | 1             | Gender                           | Gender of the individual                         | Categorical     | [Female, Male]        |
 | 2             | Age                              | Age of the individual in years                   | Numerical       | 14.0 - 61.0           |

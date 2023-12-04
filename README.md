@@ -9,3 +9,4 @@ A general-purpose repository for public, curated datasets
 | [Evaluation](evaluation) | Course Evaluation Dataset |
 | [Life Expectancy](life_expectancy) | Life Expectancy (WHO) |
 | [Obesity](obesity) | The Obesity Dataset |
+| [Housing](housing) | The California Housing Dataset |

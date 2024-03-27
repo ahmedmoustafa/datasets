@@ -18,4 +18,19 @@ The 2019 dataset includes the following columns:
 | `generosity` | Generosity |
 | `perceptions_of_corruption` | Perceptions of corruption |
 
-To start loading the data in `R`, copy [this notebook](happiness.ipynb) into your Colaboratory on Google Drive.
+
+Here are a few questions:
+
+1. What is the distribution of happiness scores across different categories (Underdeveloped, Transitioning, Developing, Developed)?
+2. How does GDP per capita correlate with the happiness score?
+3. Is there a significant difference in the healthy life expectancy across different categories?
+4. What is the relationship between social support and freedom to make life choices?
+5. How does the perception of corruption vary across categories?
+6. What is the average happiness score for each category, and how does it change when adjusting for perceptions of corruption?
+7. Identify the top 5 countries with the highest increase in happiness score when freedom to make life choices is doubled.
+8. How does the ratio of GDP per capita to social support influence the happiness score?
+9. For countries below the median happiness score, what is the trend of generosity over different levels of GDP per capita?
+
+
+- To start loading the data in `R`, copy [this notebook](happiness.ipynb) into your Colaboratory on Google Drive.
+- To start loading the data in `Python`, copy [this notebook](happiness_py.ipynb) into your Colaboratory on Google Drive.

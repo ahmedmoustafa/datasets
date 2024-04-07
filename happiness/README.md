@@ -38,7 +38,7 @@ Here are a few questions:
 
 ## Python Resources
 Here are some cheat sheets that might be helpful:
-- [Pandas Cheat Sheet](resources/Python_Pandas_Cheat_Sheet.pdf)
-- [Matplotlib Visualization](resources/Python_Matplotlib_Cheat_Sheet.pdf)
-- [Seaborn Visualization](resources/Python_Seaborn_Cheat_Sheet.pdf)
-- [Visual Vocabulary](resources/visual-vocabulary.pdf)
+- [Pandas Cheat Sheet](https://github.com/ahmedmoustafa/AUC-DSCI1412-Spring2024/blob/main/examples/maternal-smoking/resources/Python_Pandas_Cheat_Sheet.pdf)
+- [Matplotlib Visualization](https://github.com/ahmedmoustafa/AUC-DSCI1412-Spring2024/blob/main/examples/maternal-smoking/resources/Python_Matplotlib_Cheat_Sheet.pdf)
+- [Seaborn Visualization](https://github.com/ahmedmoustafa/AUC-DSCI1412-Spring2024/blob/main/examples/maternal-smoking/resources/Python_Seaborn_Cheat_Sheet.pdf)
+- [Visual Vocabulary](https://github.com/ahmedmoustafa/AUC-DSCI1412-Spring2024/blob/main/examples/maternal-smoking/resources/visual-vocabulary.pdf)

@@ -34,3 +34,11 @@ Here are a few questions:
 
 - To start loading the data in `R`, copy [this notebook](happiness.ipynb) into your Colaboratory on Google Drive.
 - To start loading the data in `Python`, copy [this notebook](happiness_py.ipynb) into your Colaboratory on Google Drive.
+
+
+## Python Resources
+Here are some cheat sheets that might be helpful:
+- [Pandas Cheat Sheet](resources/Python_Pandas_Cheat_Sheet.pdf)
+- [Matplotlib Visualization](resources/Python_Matplotlib_Cheat_Sheet.pdf)
+- [Seaborn Visualization](resources/Python_Seaborn_Cheat_Sheet.pdf)
+- [Visual Vocabulary](resources/visual-vocabulary.pdf)

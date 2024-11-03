@@ -50,11 +50,13 @@ Given the [dataset](maternal_smoking.tsv), address the following questions visua
 - **Q15.** Is there a relationship between the mom’s race and the dad’s race?
 
 You can start by opening the following notebook using Google Colaboratory then *copying* it into your Google Drive:
+
 - [Python notebook](maternal_smoking_py.ipynb)
 - [R notebook](maternal_smoking_r.ipynb)
 
 ## Resources
 Here are some cheat sheets that might be helpful:
+
 - Python
 	- [`pandas`](resources/python_pandas_cheatsheet.pdf)
 	- [`matplotlib`](resources/python_matplotlib_cheatsheet.pdf)

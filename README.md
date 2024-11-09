@@ -4,7 +4,7 @@ A general-purpose repository for public, curated datasets
 
 | Dataset | Description |
 | --- | --- |
-| [Happiness](happiness) | The World Happiness Report Dataset |
+| [Happiness](happiness2019) | The World Happiness Report 2019 Dataset |
 | [Maternal Smoking](maternal_smoking) | Maternal Smoking and Birth Weight Dataset |
 | [Transcript](transcript) | Student Transcript Dataset |
 | [Evaluation](evaluation) | Course Evaluation Dataset |

@@ -1,6 +1,6 @@
 # World Happiness Report
 
-![Smile](https://media.gettyimages.com/id/1555101635/photo/smile-face-in-neon-lights-agains-dark-wall.jpg?s=2048x2048&w=gi&k=20&c=l0ANQWGs8G50klc-J4yq1f8xgYgViwmVBuKdha3saKI=)
+![Smile](https://www.futurity.org/wp/wp-content/uploads/2024/02/happiness-wealth-survey-1600.jpg)
 
 [The World Happiness Report](https://worldhappiness.report/) is a landmark survey of the state of global happiness that ranks countries by how happy their citizens perceive themselves to be.
 

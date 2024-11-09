@@ -1,6 +1,6 @@
 # World Happiness Report
 
-![Smile](http://inspiration.rehlat.com/wp-content/uploads/2018/03/World-Happiness-Report-2018.jpg)
+![Smile](https://media.gettyimages.com/id/1555101635/photo/smile-face-in-neon-lights-agains-dark-wall.jpg?s=2048x2048&w=gi&k=20&c=l0ANQWGs8G50klc-J4yq1f8xgYgViwmVBuKdha3saKI=)
 
 [The World Happiness Report](https://worldhappiness.report/) is a landmark survey of the state of global happiness that ranks countries by how happy their citizens perceive themselves to be.
 

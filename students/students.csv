@@ -1,0 +1,51 @@
+student_id,name,major,gender,enrollment_year,gpa,credits_completed
+101,Omar Hassan,Computer Science,M,2022,3.8,90
+102,Nour Ahmed,Mathematics,F,2021,3.5,105
+103,Yasmin Kamal,Biology,F,2023,3.9,45
+104,Tarek Mansour,Physics,M,2022,3.6,88
+105,Dalia Ibrahim,Chemistry,F,2021,,95
+106,Karim Farid,Computer Science,M,2023,3.4,52
+107,Salma Nabil,Mathematics,F,2022,3.7,82
+108,Youssef Samir,Biology,M,2021,3.3,110
+109,Nada Khalil,Physics,F,2023,,38
+110,Amr Maher,Chemistry,M,2022,3.5,75
+111,Mariam Zaki,Computer Science,F,2021,3.9,98
+112,Hany Adel,Mathematics,M,2023,3.2,48
+113,Rana Fouad,Biology,F,2022,3.6,85
+114,Sherif Gamal,Physics,M,2021,3.4,102
+115,Farida Salem,Chemistry,F,2023,3.8,55
+116,Tamer Hossam,Computer Science,M,2022,,78
+117,Dina Walid,Mathematics,F,2021,3.5,95
+118,Hazem Nasser,Biology,M,2023,3.3,42
+119,Layla Fouad,Physics,F,2022,3.7,88
+120,Rami Essam,Chemistry,M,2021,3.6,108
+121,Mai Ashraf,Computer Science,F,2023,3.4,50
+122,Sami Medhat,Mathematics,M,2022,3.8,80
+123,Hoda Ramadan,Biology,F,2021,,112
+124,Nader Tarek,Physics,M,2023,3.5,45
+125,Sara Mahmoud,Chemistry,F,2022,3.7,82
+126,Adel Hany,Computer Science,M,2021,3.3,100
+127,Mona Sayed,Mathematics,F,2023,3.9,48
+128,Walid Fathy,Biology,M,2022,3.4,85
+129,Nesma Osama,Physics,F,2021,3.6,105
+130,Hossam Reda,Chemistry,M,2023,3.5,52
+131,Aya Nabil,Computer Science,F,2022,3.8,78
+132,Basel Khaled,Mathematics,M,2021,3.2,98
+133,Nihal Emad,Biology,F,2023,,40
+134,Mahmoud Sami,Physics,M,2022,3.7,88
+135,Nagla Zayed,Chemistry,F,2021,3.5,110
+136,Ziad Soliman,Computer Science,M,2023,3.6,45
+137,Heba Taha,Mathematics,F,2022,3.4,82
+138,Kamal Refaat,Biology,M,2021,3.9,105
+139,Nesreen Adly,Physics,F,2023,3.3,50
+140,Essam Lotfy,Chemistry,M,2022,3.7,85
+141,Soha Hakim,Computer Science,F,2021,3.6,95
+142,Wael Monir,Mathematics,M,2023,3.5,48
+143,Menna Yasser,Biology,F,2022,,78
+144,Ashraf Galal,Physics,M,2021,3.4,102
+145,Rania Mostafa,Chemistry,F,2023,3.8,52
+146,Khaled Amin,Computer Science,M,2022,3.5,88
+147,Neveen Saad,Mathematics,F,2021,3.7,98
+148,Fady Aziz,Biology,M,2023,3.3,42
+149,Sahar Adel,Physics,F,2022,3.6,85
+150,Medhat Fahmy,Chemistry,M,2021,3.8,108

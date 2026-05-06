@@ -52,7 +52,7 @@ The dataset has been deliberately seeded with a small number of imperfections, s
 
 1. **Missing values in `sleep_hours`.** Approximately three percent of the rows have a missing value in this column. The missingness was introduced at random and is intended to represent non-response on a single survey item.
 
-2. **Structured missingness in the prior-term GPA columns.** The columns `gpa_term1`, `gpa_term2`, and `gpa_term3` are missing for any student who has not yet completed enough academic terms to have a value in those columns. A first-year student therefore has an entry only in `gpa_term4`. A second-year student has entries in `gpa_term3` and `gpa_term4`. The same logic applies to the more senior years. The missingness in these columns is therefore structural rather than random, and any imputation strategy should take that into account.
+2. **Structured missingness in the prior-term GPA columns.** The columns `gpa_term1`, `gpa_term2`, and `gpa_term3` are missing for any student who has not yet completed enough academic terms to have a value in those columns. A first-year student therefore has an entry only in `gpa_term4`. A second-year student has entries in `gpa_term3` and `gpa_term4`. The same logic applies to the more senior years. The missingness in these columns is structural rather than random, and any imputation strategy should account for that pattern.
 
 3. **Outliers in `study_hours`.** A small number of rows report implausibly high values, in the range of approximately one hundred to one hundred forty hours per week. These values represent data-entry errors and should be detected and addressed during cleaning.
 

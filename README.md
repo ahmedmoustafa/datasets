@@ -11,3 +11,4 @@ A general-purpose repository for public, curated datasets
 | [Life Expectancy](life_expectancy) | Life Expectancy (WHO) |
 | [Obesity](obesity) | The Obesity Dataset |
 | [Housing](housing) | The California Housing Dataset |
+| [CO2](co2) | Global CO<sub>2</sub> Emissions from Fossil Fuels since 1750 |

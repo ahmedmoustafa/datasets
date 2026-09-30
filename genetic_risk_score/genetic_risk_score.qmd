@@ -1,90 +1,90 @@
 ---
-title: "Genetic Risk Scores for Type 2 Diabetes Using Python"
+title: "Synthetic Marker Scoring Exercise"
 format: gfm
 ---
 
-## Background:
-Type 2 Diabetes (T2D) is a metabolic disorder with a significant genetic component. This project focuses on calculating genetic risk scores (GRS) based on identified SNPs associated with T2D from GWAS studies.
+## Purpose
 
-## Objective:
-To write a Python program to calculate GRS for T2D for 1000 individuals, utilizing provided genotypic data and GWAS information. This includes data handling, computation of risk scores, visualization, and identification of high-risk individuals.
+Practice counting symbols in diploid marker strings, calculating a weighted sum, and ranking records. This is a fully synthetic exercise. The marker names, frequencies, and weights are fictional. They do not represent a GWAS, a disease model, or a clinical risk score.
 
-## Genetic Risk Score:
-The formula for calculating the Genetic Risk Score (GRS):
+The directory keeps its original name for continuity, but this replacement lesson does not estimate type 2 diabetes risk. A large score means only a larger value under the chosen teaching weights.
 
-$$ GRS = \sum (\log(\text{Odds Ratio}) \times \text{Allele Count}) $$
+## Files and setup
 
-In this formula:
+- [toy_genotypes.csv](toy_genotypes.csv): 1,000 generated records and five fictional markers, plus `record_id`.
+- [generate.py](generate.py): the complete generator, using only the Python standard library.
+- [validate.py](validate.py): checks regeneration, allowed values, and example calculations.
+- [genetic_risk_score.qmd](genetic_risk_score.qmd): the lesson source used to render this README.
 
-- $\sum$ denotes the summation across all SNPs.
-- $\log(\text{Odds Ratio})$ is the natural logarithm of the odds ratio associated with each SNP's risk allele.
-- $\text{Allele Count}$ is the number of risk alleles ($0$, $1$, or $2$) present in an individual's genotype for each SNP.
+Download the CSV beside your Python notebook or script. It is a regular Git file, not a Git LFS pointer. To load it with pandas:
 
+```python
+import pandas as pd
 
-## Provided Data:
-1. GWAS Information for T2D:
+records = pd.read_csv("toy_genotypes.csv")
+expected = ["record_id"] + [f"marker_{i}" for i in range(1, 6)]
+assert list(records.columns) == expected
+assert records.shape == (1000, 6)
+assert records["record_id"].is_unique
+assert not records.isna().any().any()
+```
 
-| rsID       | Risk Allele | Odds Ratio |
-|------------|-------------|------------|
-| `rs7903146`  | T           | 1.4        |
-| `rs1801282`  | G           | 1.3        |
-| `rs5219`     | A           | 1.2        |
-| `rs4402960`  | G           | 1.5        |
-| `rs13266634` | C           | 1.6        |
+Install pandas separately if needed. The generator and validator do not require it.
 
+## How the data are generated
 
-2. Genotypic Data for 1000 Individuals:
+The generator uses a local Python random-number generator with seed `20260930`. For each record and marker, it draws two independent symbols and sorts the pair so that `AG` and `GA` have one representation. Records and markers are independent by construction. The output has no real participant information, disease outcomes, ancestry, genomic coordinates, or linkage structure.
 
-The [genotypes.tsv](https://github.com/ahmedmoustafa/datasets/blob/main/genetic_risk_score/genotypes.tsv) table of 1000 individuals, where each row represents an individual, and each column represents a SNP.
+| Marker | Counted symbol | Other symbol | Generation probability of counted symbol | Illustrative multiplier |
+| --- | --- | --- | ---: | ---: |
+| marker_1 | C | A | 0.25 | 1.6 |
+| marker_2 | G | A | 0.30 | 1.3 |
+| marker_3 | G | A | 0.20 | 1.5 |
+| marker_4 | A | T | 0.35 | 1.2 |
+| marker_5 | T | A | 0.25 | 1.4 |
 
-Here are the top five rows of the genotypic data table:
+All probabilities and multipliers are chosen for the exercise, not estimated from a study. Repeated five-marker profiles are expected and are not automatically data errors. `record_id` identifies a generated row, not a person.
 
-|   `individual_id` | `rs13266634`   | `rs1801282`   | `rs4402960`   | `rs5219`   | `rs7903146`   |
-|----------------:|:-------------|:------------|:------------|:---------|:------------|
-|               1 | CA           | AA          | AA          | TT       | AA          |
-|               2 | CA           | GA          | AA          | TT       | AA          |
-|               3 | CC           | AA          | AA          | TT       | AA          |
-|               4 | AA           | GG          | AA          | TT       | TT          |
-|               5 | CA           | AA          | AA          | AT       | AA          |
+## Score definition
 
-3. Example Calculation for First Individual:
+For each record, calculate:
 
-For `individual_id` 1, suppose the genotypes are:
+$$
+S = \sum_{j=1}^{5} n_j\ln(m_j)
+$$
 
-- `rs13266634`: CA
-- `rs1801282`: AA
-- `rs4402960`: AA
-- `rs5219`: TT
-- `rs7903146`: AA
+Here, `n_j` is the count of the marker's designated symbol (0, 1, or 2), and `m_j` is its illustrative multiplier. Use the natural logarithm. These multipliers are not supported disease odds ratios. The score has no calibrated probability interpretation, and exponentiating it does not produce a validated disease-risk estimate.
 
-The GRS is calculated as follows:
+The first generated record is `AA, AG, AA, TT, AT`. Only marker_2 and marker_5 contribute, so its score is `ln(1.3) + ln(1.4)`, approximately **0.598837**. An all-uncounted-symbol record scores zero; an all-counted-symbol record scores `2 * sum(ln(m_j))`.
 
-- `rs13266634` (C, 1.6): 1 risk allele, score contribution = log(1.6)
-- `rs1801282` (G, 1.3): 0 risk alleles, score contribution = 0
-- `rs4402960` (G, 1.5): 0 risk alleles, score contribution = 0
-- `rs5219` (A, 1.2): 0 risk alleles, score contribution = 0
-- `rs7903146` (T, 1.4): 0 risk alleles, score contribution = 0
+## Tasks
 
-Thus, the total GRS = 0 + 0 + 0 + 0 + log(1.6) $\approx$ 0.47
+1. Load the table. Check its dimensions, unique IDs, missing values, two-symbol strings, and marker-specific alphabets. Reject unexpected values rather than silently counting them as zero.
+2. Count each designated symbol and calculate the score. Retain the original marker columns and add separate count and score columns.
+3. Check your calculation against the first-record example and the all-zero/all-two count cases.
+4. Describe and plot the score distribution. Explain why repeated scores are expected with only five markers.
+5. Select exactly 50 records with the largest scores, sorting by score descending and then `record_id` ascending to break ties. Report how many records share the cutoff score and how many tied records were excluded. The ID rule is arbitrary and is not a biological distinction.
+6. Compare that selection with including every record whose score is at least the 50th-largest score. The second set can contain more than 50 records. Call both sets “highest-scoring records,” not “high-risk individuals.”
+7. Change one illustrative multiplier and describe how ranks change. Explain why these rankings depend on chosen weights rather than demonstrated health outcomes.
+8. Discuss what a real genetic risk study would additionally need: traceable variants and weights, allele/build harmonization, appropriate study populations, independent validation, and calibration. None of these is established by this toy exercise.
 
-## Tasks:
-- Data Preprocessing
-- Risk Score Calculation
-- Statistical Analysis and Visualization
-- Identification of High-Risk Individuals
+Submit your notebook with methods, checks, plots, tie handling, and a short interpretation limited to the synthetic exercise. Do not claim clinical accuracy, disease probability, or population validity.
 
-## Deliverables:
-1. Google Colab Notebook: Create a Google Colab notebook that includes all parts of the project:
-    - Data Loading and Preprocessing.
-    - Risk Score Calculation.
-    - Statistical Analysis and Visualization. Use Python libraries like Matplotlib and Seaborn to visualize the distribution of genetic risk scores. Include histograms, density plots, or other relevant visualizations.
-    - Identification of High-Risk Individuals: Write code to identify individuals within the top 5% of GRS.
-    - Discussion: Use markdown cells to interpret your findings, discuss potential implications for T2D risk prediction, and possible limitations of this approach.
-2. Comprehensive Report within the Notebook: Alongside the code, your Colab notebook should include a detailed report. Use markdown cells to document:
-    - The methodology used.
-    - The results obtained from the analysis.
-    - Visualizations of the data.
-    - A discussion section covering the interpretation of results, implications, and limitations.
-    - Any conclusions drawn from the project.
-3. Shareable Link to the Notebook: Once your project is complete, ensure that the Google Colab notebook is shareable and accessible. Provide a link to the notebook as part of your submission.
+## Reproduce and validate
 
+From the repository root:
+
+```sh
+python3 genetic_risk_score/generate.py
+python3 genetic_risk_score/validate.py
+```
+
+The generator writes next to its script by default. Use `--output /path/to/copy.csv` to generate a separate copy. The validator regenerates into a temporary directory and checks byte equality. Record your Python version when reproducing the data.
+
+To update this README from the lesson source, run `quarto render genetic_risk_score.qmd --to gfm --output README.md` from inside the `genetic_risk_score` directory.
+
+## Replacement and reuse notes
+
+This version replaces the earlier unverified genotype file with newly generated data. The old lesson used real variant identifiers and uncited weights without enough provenance to support its biological claims. Renaming those old records would not establish that they were synthetic, so they are not reused here. The old TSV and PDF are removed from the current directory; they remain in Git history for traceability.
+
+The new generator, synthetic CSV, and lesson are original material covered by the repository's CC0 dedication. They contain no third-party genotype records. This statement does not clear the provenance or reuse rights of files in earlier versions.
